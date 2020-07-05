@@ -24,6 +24,23 @@ const createCourse = (course) => {
     })
 }
 
+function goToCourse(id) {
+    window.open("./course.html?id=" + id, "_self");
+}
+
+function addStep() {
+    document.getElementById("steps").innerHTML += `<div class="form-group"><input type="text" class="form-control" id="step-title" placeholder="Step Title">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="step-number" placeholder="Step Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="description" placeholder="Description">
+                    </div>
+                    <label for="image">Upload Image (optional)</label>
+                    <input type="file" class="form-control-file" id="image">`;
+}
+
 const loadCourses = () => {
     let data = getCourse();
 
@@ -31,16 +48,19 @@ const loadCourses = () => {
     const tutorialList = document.getElementById("tutorialList");
     data = [
         {
+            id: 1,
             title: "How to make fake data",
             description: "Here you can learn how to make fake data",
             author: "Amin"
         },
         {
+            id: 2,
             title: "How to do good at TBZ",
             description: "Here you can learn how to be good in tbz",
             author: "Julian"
         },
         {
+            id: 3,
             title: "How to speak japanese",
             description: "Here you can learn how to speak japanese",
             author: "Sam"
