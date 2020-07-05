@@ -1,7 +1,5 @@
 const baseurl = "http://www.pearcenet.ch:8080";
 
-window.onload = loadCourses();
-
 const getCourse = (id) => {
     url = "";
     id ? url = "/getcourse" : url = "/getcourse?id=" + id;
@@ -25,3 +23,5 @@ const loadCourses = () => {
     const tutorials = Mustache.render(template.innerHTML, {'tutorials': data})
     tutorialList.innerHTML = tutorials;
 }
+
+window.onload = loadCourses();
