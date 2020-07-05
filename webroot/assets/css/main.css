@@ -27,6 +27,11 @@
     max-width: 40rem;
 }
 
+.step {
+    margin-top: 300;
+    margin-bottom: 10;
+}
+
 a:hover {
     text-decoration: none;
 }

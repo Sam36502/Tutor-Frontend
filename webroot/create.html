@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tutor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <link href="./assets/css/main.css" rel="stylesheet">
+    <script type="text/javascript" src="assets/js/mustache.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script>
+        function addStep() {
+            document.getElementById("steps").innerHTML += `<div class="form-group"><input type="text" class="form-control" id="step-title" placeholder="Step Title">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" id="step-number" placeholder="Step Number">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="description" placeholder="Description">
+                            </div>
+                            <label for="image">Upload Image (optional)</label>
+                            <input type="file" class="form-control-file" id="image">`;
+        }
+
+        function submit() {
+            document.getElementsByName
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+            <a href="./index.html" class="navbar-brand d-flex align-items-center">
+                <strong>Tutor</strong>
+            </a>
+        </div>
+    </div>
+</header>
+
+<main role="main">
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Create a Tutorial</h1>
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <form action="index.html" onsubmit="submit()">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="author" placeholder="Author">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="title" placeholder="Title">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="description" placeholder="Description">
+                        </div>
+                        <div id="steps" class="step"></div>
+                        <a class="btn btn-primary my-2" onclick=addStep()>Add Step</a><br>
+                        <a href="index.html" class="btn btn-danger">Cancel</a>
+                        <input class="btn btn-success" type="submit" value="Submit">
+                      </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="#">Back to top</a>
+        </p>
+        <p>Tutor &copy;, a site for creating simple step-by-step tutorials</p>
+    </div>
+</footer>
+</body>
+</html>
