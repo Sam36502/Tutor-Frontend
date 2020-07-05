@@ -2,7 +2,7 @@ const baseurl = "http://www.pearcenet.ch:8080";
 
 const getCourse = (id) => {
     url = "";
-    id ? url = "/getcourse" : url = "/getcourse?id=" + id;
+    id ? url = "/getcourse?id=" + id : url = "/getcourse";
     fetch(baseurl + url)
     .then(response => response.json())
     .then(data => {return data});
