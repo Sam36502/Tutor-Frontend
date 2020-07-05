@@ -1,4 +1,4 @@
-const baseurl = "http://www.pearcenet.ch:8080";
+const baseurl = "http://127.0.0.1:8080";
 
 const getCourse = (id) => {
     url = "";
@@ -25,7 +25,7 @@ const createCourse = (course) => {
 }
 
 const loadCourses = () => {
-    const data = getCourse();
+    let data = getCourse();
 
     const template = document.getElementById("tutorial");
     const tutorialList = document.getElementById("tutorialList");
@@ -36,13 +36,13 @@ const loadCourses = () => {
             author: "Amin"
         },
         {
-            title: "How to fuck up at tbz",
-            description: "Here you can learn how to fuck up at tbz",
+            title: "How to do good at TBZ",
+            description: "Here you can learn how to be good in tbz",
             author: "Julian"
         },
         {
-            title: "How to die",
-            description: "Here you can learn how to die",
+            title: "How to speak japanese",
+            description: "Here you can learn how to speak japanese",
             author: "Sam"
         },
     ]
